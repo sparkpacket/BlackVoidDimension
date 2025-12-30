@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Black Void Pocket Dimension",
+    "description": "A massive black void dimension with a solid black floor",
+    "uuid": "e3a1c9e6-9c7f-4f3c-8a6e-111111111111",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 40]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "b6d2a2c5-8b7e-4c2a-9b9f-222222222222",
+      "version": [1, 0, 0]
+    }
+  ]
+}
