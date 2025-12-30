@@ -1,0 +1,66 @@
+{
+  "format_version": "1.20.40",
+  "minecraft:dimension": {
+    "description": {
+      "identifier": "blackvoid:black_void"
+    },
+    "components": {
+      "minecraft:dimension_type": {
+        "natural": false,
+        "has_skylight": false,
+        "ultrawarm": false,
+        "has_ceiling": false,
+        "bed_works": false,
+        "respawn_anchor_works": false,
+        "ambient_light": 0.02,
+        "fixed_time": 18000,
+        "coordinate_scale": 1.0
+      },
+
+      "minecraft:gravity": {
+        "value": 0.03
+      },
+
+      "minecraft:fog": {
+        "fog_identifier": "minecraft:fog_the_end"
+      },
+
+      "minecraft:generator": {
+        "type": "noise",
+        "settings": {
+          "seed": 0,
+          "sea_level": -64,
+          "disable_mob_generation": true,
+          "default_block": "minecraft:black_concrete",
+          "default_fluid": "minecraft:air",
+
+          "noise": {
+            "min_y": -64,
+            "height": 256,
+            "size_horizontal": 1,
+            "size_vertical": 2
+          },
+
+          "surface_rule": {
+            "type": "sequence",
+            "rules": [
+              {
+                "type": "condition",
+                "if_true": {
+                  "type": "vertical_gradient",
+                  "random_name": "bedrock_floor",
+                  "true_at_and_below": -64,
+                  "false_at_and_above": -60
+                },
+                "then_run": {
+                  "type": "block",
+                  "result_state": "minecraft:bedrock"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
